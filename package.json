@@ -1,0 +1,21 @@
+{
+  "name": "min-instagram",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "<h2>Dette må gjøres aller først: </h2>\r <ol>\r  <li> Installer <a href=\"https://nodejs.org/en\">Node.js</a></li>\r <li>Opprett ei mappe til prosjektet</li>\r <li> Kjør kommandoen <code>npm init -y </code> i mappa</li>\r <li> Kjør kommandoen <code>npm install sqlite3 express ejs bcrypt sqlite express-session</code></li>\r  <li>Opprett ei databasefil (database.db) (td. i SQLiteStudio). Denne må ligge i prosjektmappa di. </li>\r  <li>Last ned eksempelkoden og prøv deg fram.</li>\r </ol>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
+  }
+}

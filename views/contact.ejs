@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktinformasjon</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="/"><h1>AutoSert AS</h1></a>
+        </div>
+        <div class="navlinks">
+            <a href="/courses">Kursoversikt</a>
+            <a href="/contact">Kontakt</a>
+            <a href="/ansatte">Tilsette</a>
+            <% if (admin) { %>
+                <a href="/admin">Admin</a>
+            <% } %>  
+        </div>
+        <a href="/register">
+            <div class="orderBtn">
+                Bestill opplæring
+            </div>
+        </a>
+    </nav>
+   <main>
+        <h1 class="header">Kontaktinformasjon</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Administrasjon</h2>
+                <p><strong>Adresse:</strong> Saghaugen 3, 5411 Stord</p>
+                <p><strong>Telefon:</strong> 98765450</p>
+            </div>
+            <div class="contact-map">
+                <iframe
+                    width="600"
+                    height="450"
+                    style="border:0"
+                    loading="lazy"
+                    allowfullscreen
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=5.471732,59.769804,5.493853,59.771404&layer=mapnik&marker=59.770604,5.482792">
+                </iframe>
+                <br/>
+                <small>
+                    <a href="https://www.openstreetmap.org/?mlat=59.770604&mlon=5.482792#map=19/59.77060/5.48279">
+                        Vis større kart
+                    </a>
+                </small>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div>
+                <p>AutoSert A/S</p>
+                <p>Saghaugen 3</p>
+                <p>5411 Stord</p>
+            </div>
+           
+        </div>
+        <div class="footer-content">
+            <p>&copy; 2024 AutoSert A/S</p>
+            <% if (!loggedin) { %>
+                <a href="/login">Logg inn</a>
+            <% } else { %>
+                <a href="/logout">Logg ut</a>
+            <% } %>    
+                
+                
+        </div>
+    </footer>
+</body>
+</html>

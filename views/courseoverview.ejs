@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Courses</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="courseoverview.css">
+    <link rel="stylesheet" href="admin.css">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="/">
+                <h1>AutoSert AS</h1>
+            </a>
+        </div>
+        <div class="navlinks">
+            <a href="/courses">Kursoversikt</a>
+            <a href="/contact">Kontakt</a>
+            <a href="/ansatte">Tilsette</a>
+        </div>
+        <a href="/register">
+            <div class="orderBtn">
+                Bestill opplæring
+            </div>
+        </a>
+    </nav>
+    
+    <main>
+        <div class="admin-container">
+            <div class="admin-buttons">
+                <a href="/courseoverview" class="admin-button active">
+                    <span class="material-symbols-outlined">
+                        badge
+                    </span> Kursdeltakere
+                </a>
+            </div>
+            <div class="admin-content">
+                <div>
+                    <h1 class="header">Kursdeltakere</h1>
+                </div>
+                <div class="">
+
+                    <div class="button-container">
+                        <% for(let coursename in courses) { %>
+                            <button class="course-button" onclick="showCourse('<%= coursename %>')">
+                                <%= coursename %> 
+                            </button>
+                        <% } %>
+                    </div>
+                    <div>
+                        <% for(let coursename in courses) { %>
+                            <div class="course-table" id="<%= coursename %>">
+                                <h2>
+                                    <%= coursename %> (<%= courses[coursename].count %> deltakere)
+                                </h2>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Fornavn</th>
+                                            <th>Etternavn</th>
+                                            <th>E-post</th>
+                                            <th>Mobil</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% courses[coursename].participants.forEach(participant => { %>
+                                            <tr>
+                                                <td><%= participant.firstname %></td>
+                                                <td><%= participant.lastname %></td>
+                                                <td><%= participant.email %></td>
+                                                <td><%= participant.mobile %></td>
+                                            </tr>
+                                        <% }) %>
+                                    </tbody>
+                                </table>
+                            </div>
+                        <% } %>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div>
+                    <p>AutoSert A/S</p>
+                    <p>Saghaugen 3</p>
+                    <p>5411 Stord</p>
+                </div>
+            </div>
+            <div class="footer-content">
+                <p>&copy; 2024 AutoSert A/S</p>
+                <% if (!loggedin) { %>
+                    <a href="/login">Logg inn</a>
+                <% } else { %>
+                    <a href="/logout">Logg ut</a>
+                <% } %>    
+            </div>
+        </footer>
+        <script>
+            function showCourse(coursename) {
+                // Hide all tables
+                const tables = document.querySelectorAll('.course-table');
+                tables.forEach(table => {
+                    table.style.display = 'none';
+                });
+                // Show the selected course table
+                document.getElementById(coursename).style.display = 'block';
+            }
+        </script>
+</body>
+
+</html>

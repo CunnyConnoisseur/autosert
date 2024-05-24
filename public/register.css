@@ -1,0 +1,58 @@
+.login {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Sikrer at padding ikke legger til ekstra bredde */
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #1976D2; 
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #1976D2; 
+}
+
+input::placeholder {
+    color: #888; /* lys grå tekstfarge for placeholder */
+}
+
+p#errormessage {
+    color: #D32F2F; /* rød farge for feilmeldinger */
+    font-size: 14px;
+}
+
+div {
+    text-align: left;
+}
+
+form {
+    border-top: 2px solid #1976D2;
+    padding-top: 20px;
+}

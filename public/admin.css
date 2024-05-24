@@ -1,0 +1,46 @@
+
+main {
+    flex: 1;
+    display: flex;
+}
+
+.admin-buttons a.active {
+    background-color: #808080; /* Grå bakgrunnsfarge *//* Blå bakgrunnsfarge */
+    color: #fff; /* Hvit tekst */
+}
+
+.admin-buttons a.active .material-symbols-outlined {
+    color: #fff; /* Hvit ikonfarge */
+}
+
+.admin-container {
+    display: flex;
+    flex: 1;
+}
+
+.admin-buttons {
+    width: 200px; /* Bredden på navigasjonen */
+    background-color: #f4f4f4; /* Bakgrunnsfarge for navigasjonen */
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Skygge for å gi dybde */
+    display: flex;
+    flex-direction: column; /* Plasserer knappene vertikalt */
+}
+
+.admin-buttons a {
+    text-decoration: none; /* Fjern standard understrek på lenker */
+    color: #333; /* Tekstfarge */
+    padding: 10px; /* Padding rundt lenkene */
+    margin-bottom: 10px; /* Margin mellom knappene */
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s; /* Myk overgang på hover */
+}
+
+.admin-buttons a .material-symbols-outlined {
+    margin-right: 10px; /* Margin mellom ikon og tekst */
+}
+
+.admin-content {
+    flex: 1; /* Fyller resten av plassen */
+    padding: 20px; /* Padding rundt innholdet */
+}

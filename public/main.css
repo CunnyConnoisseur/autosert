@@ -1,0 +1,51 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    padding:20px;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav .navlinks a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+nav .navlinks a:hover {
+    background-color: #555;
+}
+
+.container {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+/* Stil for knapper */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
