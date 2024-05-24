@@ -10,9 +10,6 @@
 
 <h2>Dette må du endre/sjekke før du starter: </h2>
 <ul>
- <li> Databasefila di må ligge i mappa saman med kodefilene</li>
- <li>I index.js: Linje 8: Pass på at navnet på databasefila er rett </li>
- <li>I index.js: Linje 51 og 61  henter informasjon frå tabellen users, og kolonnene firstname, lastname, email og password. Desse må passe til din tabell og dine kolonner. </li>
  <li>Filene du trenger å konsentrere deg om er: index.js og filene i views og public-mappene. Du trenger ikkje tenke på dei andre filene. </li>
  <li>Filene som ligger i "views"-mappa, er dei sidene som viser informasjonen på nettsida. Dei er skrevet i HTML og bruker ejs for å skrive JavaScript for å hente informasjon frå databaser.</li>
 </ul>
